@@ -64,4 +64,15 @@ final class SymbolTests: XCTestCase {
         sut = Knight(color: .white)
         XCTAssertEqual(sut.getSymbol().image, "♘")
     }
+    
+    func testKing() {
+        XCTAssertEqual(King.maxCount, 1)
+        
+        var sut: King!
+        sut = King(color: .black)
+        XCTAssertEqual(sut.getSymbol().image, "♚")
+        
+        sut = King(color: .white)
+        XCTAssertEqual(sut.getSymbol().image, "♔")
+    }
 }

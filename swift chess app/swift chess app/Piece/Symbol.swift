@@ -13,6 +13,7 @@ enum Symbol {
     case rook(PieceColor)
     case queen(PieceColor)
     case knight(PieceColor)
+    case king(PieceColor)
     case empty
     
     var image: String {
@@ -22,6 +23,7 @@ enum Symbol {
         case .rook(let color):      return color == .black ? "♜" : "♖"
         case .queen(let color):     return color == .black ? "♛" : "♕"
         case .knight(let color):    return color == .black ? "♞" : "♘"
+        case .king(let color):      return color == .black ? "♚" : "♔"
         case .empty:                return "."
         }
     }
@@ -33,6 +35,7 @@ enum Symbol {
         case .rook:     return "rook"
         case .queen:    return "queen"
         case .knight:   return "knight"
+        case .king:     return "king"
         default:        return "empty"
         }
     }
@@ -44,6 +47,7 @@ enum Symbol {
         case Self.rook(color).rawValue:     self = .rook(color)
         case Self.queen(color).rawValue:    self = .queen(color)
         case Self.knight(color).rawValue:   self = .knight(color)
+        case Self.king(color).rawValue:     self = .king(color)
         default:                            self = .empty
         }
     }

@@ -27,6 +27,8 @@
 		993ACC4528E7FA9000924666 /* Rook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993ACC4428E7FA9000924666 /* Rook.swift */; };
 		993ACC4728E7FA9600924666 /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993ACC4628E7FA9600924666 /* Queen.swift */; };
 		993ACC4928E7FA9B00924666 /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993ACC4828E7FA9B00924666 /* Knight.swift */; };
+		994D063028F464A5004BEE89 /* King.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D062F28F464A5004BEE89 /* King.swift */; };
+		994D063228F464C4004BEE89 /* KingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994D063128F464C4004BEE89 /* KingTests.swift */; };
 		995A60D728E6670200AB7162 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A60D628E6670200AB7162 /* Pawn.swift */; };
 		995A60D928E6676000AB7162 /* Pieceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A60D828E6676000AB7162 /* Pieceable.swift */; };
 		995A60DD28E66DA400AB7162 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995A60DC28E66DA400AB7162 /* Board.swift */; };
@@ -81,6 +83,8 @@
 		993ACC4428E7FA9000924666 /* Rook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rook.swift; sourceTree = "<group>"; };
 		993ACC4628E7FA9600924666 /* Queen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queen.swift; sourceTree = "<group>"; };
 		993ACC4828E7FA9B00924666 /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
+		994D062F28F464A5004BEE89 /* King.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = King.swift; sourceTree = "<group>"; };
+		994D063128F464C4004BEE89 /* KingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingTests.swift; sourceTree = "<group>"; };
 		995A60D628E6670200AB7162 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		995A60D828E6676000AB7162 /* Pieceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pieceable.swift; sourceTree = "<group>"; };
 		995A60DC28E66DA400AB7162 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				993ACC3E28E7F54B00924666 /* RookTests.swift */,
 				993ACC4028E7F55400924666 /* QueenTests.swift */,
 				993ACC4228E7F55C00924666 /* KnightTests.swift */,
+				994D063128F464C4004BEE89 /* KingTests.swift */,
 			);
 			path = Piece;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				993ACC4428E7FA9000924666 /* Rook.swift */,
 				993ACC4628E7FA9600924666 /* Queen.swift */,
 				993ACC4828E7FA9B00924666 /* Knight.swift */,
+				994D062F28F464A5004BEE89 /* King.swift */,
 			);
 			path = Piece;
 			sourceTree = "<group>";
@@ -375,6 +381,7 @@
 				993ACC4528E7FA9000924666 /* Rook.swift in Sources */,
 				995A60D928E6676000AB7162 /* Pieceable.swift in Sources */,
 				9932590028E33BC60099D0B6 /* SceneDelegate.swift in Sources */,
+				994D063028F464A5004BEE89 /* King.swift in Sources */,
 				995A60D728E6670200AB7162 /* Pawn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +392,7 @@
 			files = (
 				993ACC3F28E7F54B00924666 /* RookTests.swift in Sources */,
 				993ACC4128E7F55400924666 /* QueenTests.swift in Sources */,
+				994D063228F464C4004BEE89 /* KingTests.swift in Sources */,
 				995A60E628E6768900AB7162 /* SymbolTests.swift in Sources */,
 				9932591528E33BC70099D0B6 /* swift_chess_appTests.swift in Sources */,
 				997E714628E9C8CC00400AC2 /* PositionTests.swift in Sources */,

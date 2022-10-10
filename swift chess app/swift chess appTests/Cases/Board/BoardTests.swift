@@ -15,18 +15,18 @@ final class BoardTests: XCTestCase {
     func testStartGame() {
         sut = Board()
         
-        XCTAssertEqual(sut.score.black, 39)
-        XCTAssertEqual(sut.score.white, 39)
+        XCTAssertEqual(sut.score.black, 39 + 15)
+        XCTAssertEqual(sut.score.white, 39 + 15)
         XCTAssertEqual(sut.display(), """
  ABCDEFGH
-1♜♞♝.♛♝♞♜
+1♜♞♝♚♛♝♞♜
 2♟♟♟♟♟♟♟♟
 3........
 4........
 5........
 6........
 7♙♙♙♙♙♙♙♙
-8♖♘♗.♕♗♘♖
+8♖♘♗♔♕♗♘♖
  ABCDEFGH
 """
         )
@@ -48,23 +48,23 @@ final class BoardTests: XCTestCase {
         XCTAssertTrue(sut.move(from: "G4", to: "G3"))
         
         XCTAssertTrue(sut.move(from: "B6", to: "B7"))
-        XCTAssertEqual(sut.score.black, 39)
-        XCTAssertEqual(sut.score.white, 38)
+        XCTAssertEqual(sut.score.black, 39 + 15)
+        XCTAssertEqual(sut.score.white, 38 + 15)
         
         XCTAssertTrue(sut.move(from: "G3", to: "G2"))
-        XCTAssertEqual(sut.score.black, 38)
-        XCTAssertEqual(sut.score.white, 38)
+        XCTAssertEqual(sut.score.black, 38 + 15)
+        XCTAssertEqual(sut.score.white, 38 + 15)
         
         XCTAssertEqual(sut.display(), """
  ABCDEFGH
-1♜♞♝.♛♝♞♜
+1♜♞♝♚♛♝♞♜
 2♟.♟♟♟♟♙♟
 3........
 4........
 5........
 6........
 7♙♟♙♙♙♙.♙
-8♖♘♗.♕♗♘♖
+8♖♘♗♔♕♗♘♖
  ABCDEFGH
 """
         )
@@ -76,14 +76,14 @@ final class BoardTests: XCTestCase {
         XCTAssertTrue(sut.move(from: "B2", to: "B3"))
         XCTAssertEqual(sut.display(), """
  ABCDEFGH
-1♜♞♝.♛♝♞♜
+1♜♞♝♚♛♝♞♜
 2♟.♟♟♟♟♟♟
 3.♟......
 4........
 5........
 6........
 7♙♙♙♙♙♙♙♙
-8♖♘♗.♕♗♘♖
+8♖♘♗♔♕♗♘♖
  ABCDEFGH
 """
         )
@@ -134,9 +134,12 @@ final class BoardTests: XCTestCase {
         XCTAssertEqual(sut.help(input: "A8"), [])
         
         // Queen 테스트
-        XCTAssertEqual(sut.help(input: "E1"), ["D1"])
+        XCTAssertEqual(sut.help(input: "E1"), [])
         
         // Knight 테스트
         XCTAssertEqual(sut.help(input: "G8"), ["F6", "H6"])
+        
+        // King 테스트
+        XCTAssertEqual(sut.help(input: "D8"), [])
     }
 }

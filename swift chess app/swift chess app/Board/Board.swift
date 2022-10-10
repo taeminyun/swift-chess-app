@@ -121,6 +121,7 @@ private extension Board {
         putRooks()
         putQueens()
         putKnights()
+        putKings()
     }
     
     func putPieces(piece: Pieceable, input locations: String...) {
@@ -192,5 +193,13 @@ private extension Board {
         
         putPieces(piece: Knight(color: .white),
                   input: "B8", "G8")
+    }
+    
+    func putKings() {
+        putPieces(piece: King(color: .black),
+                  input: "D1")
+        
+        putPieces(piece: King(color: .white),
+                  input: "D8")
     }
 }
